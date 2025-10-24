@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client';
 import './styles/Index.css';
 import App from './App.tsx';
 
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import store from './hooks/store.ts';
 import ScrollToTop from './components/ScrollToTop.tsx';
@@ -13,10 +13,10 @@ if (container) {
   createRoot(container).render(
     <React.StrictMode>
       <Provider store={store}>
-        <HashRouter>
+        <BrowserRouter>
           <ScrollToTop/>
           <App />
-        </HashRouter>
+        </BrowserRouter>
       </Provider>
     </React.StrictMode>
   );
