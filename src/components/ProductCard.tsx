@@ -39,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return (raw ?? '').toString().trim();
   }, [producto]);
 
-  const linkTarget = productId ? `/producto/${productId}` : '#';
+  const linkTarget = productId ? `/UTN-Frontend-Final/producto/${productId}` : '#';
 
   const handleToggleDisponibilidad = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
