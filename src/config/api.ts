@@ -1,4 +1,4 @@
-const DEFAULT_API_BASE_URL = (import.meta.env.VITE_API_BASE_URL as string | undefined) ?? '';
+const DEFAULT_API_BASE_URL = 'https://utn-backend-final.onrender.com/api';
 
 const ensureLeadingSlash = (path: string): string => {
   if (!path) return '';
