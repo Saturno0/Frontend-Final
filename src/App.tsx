@@ -14,16 +14,16 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<PrincipalPage />} />
-      <Route path="/producto/:id" element={<ProductPage />} />
-      <Route path="/cart" element={<CartPage />} />
-      <Route path='/form' element={<FormPage />} />
-      <Route path='/login' element={<LoginPage />} />
-      <Route path='/checkout' element={<CheckoutPage />}/>
-      <Route path='/newIn' element={<NewInPage />}/>
-      <Route path='/profile' element={<ProfilePage />}/>
-      <Route path='/register' element={<RegisterPage />}/>
-      <Route path='/create-product' element={<CreateProductPage />}/>
+      <Route path='/UTN-Frontend-Final/' element={<PrincipalPage />} />
+      <Route path='/UTN-Frontend-Final/producto/:id' element={<ProductPage />} />
+      <Route path='/UTN-Frontend-Final/cart' element={<CartPage />} />
+      <Route path='/UTN-Frontend-Final/form' element={<FormPage />} />
+      <Route path='/UTN-Frontend-Final/login' element={<LoginPage />} />
+      <Route path='/UTN-Frontend-Final/checkout' element={<CheckoutPage />}/>
+      <Route path='/UTN-Frontend-Final/newIn' element={<NewInPage />}/>
+      <Route path='/UTN-Frontend-Final/profile' element={<ProfilePage />}/>
+      <Route path='/UTN-Frontend-Final/register' element={<RegisterPage />}/>
+      <Route path='/UTN-Frontend-Final/create-product' element={<CreateProductPage />}/>
     </Routes>
   )
 }
