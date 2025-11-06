@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { register, logout } from "../hooks/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../hooks/store";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -32,10 +33,11 @@ const Profile = () => {
     dispatch(register(formData)); // actualiza redux y localStorage
     setIsEditing(false);
   };
-
+  const navigate = useNavigate();
   const handleLogout = () => {
     dispatch(logout());
     setIsEditing(false);
+    navigate("/");
   };
 
   return (
