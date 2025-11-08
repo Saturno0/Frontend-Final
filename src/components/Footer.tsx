@@ -18,7 +18,6 @@ function Footer() {
                         }}> <li>Productos</li> 
                         </Link>
                         <li>Nuevo Ingreso</li>
-                        <li>Más Vendidos</li>
                     </ul>
                 </div>
             

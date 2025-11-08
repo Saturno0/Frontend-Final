@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
-import { register } from "../hooks/userSlice";
+import { logout, register } from "../hooks/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../hooks/store";
+import { useNavigate } from "react-router-dom";
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -22,6 +23,13 @@ const Profile = () => {
       password: "", // por seguridad no mostramos password
     });
   }, [user]);
+
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    dispatch(logout());
+    setIsEditing(false);
+    navigate('/login');
+  };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -84,7 +92,10 @@ const Profile = () => {
             <button onClick={() => setIsEditing(false)}>Cancelar</button>
           </>
         ) : (
-          <button onClick={() => setIsEditing(true)}>Editar Perfil</button>
+          <>
+            <button onClick={() => setIsEditing(true)}>Editar Perfil</button>
+            <button onClick={handleLogout}>Cerrar sesion</button>
+          </>
         )}
       </div>
     </div>
