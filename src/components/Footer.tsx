@@ -17,7 +17,9 @@ function Footer() {
                             hash: "#products"
                         }}> <li>Productos</li> 
                         </Link>
-                        <li>Nuevo Ingreso</li>
+                        <Link to="/newIn">
+                            <li>Nuevo Ingreso</li>
+                        </Link>
                     </ul>
                 </div>
             
